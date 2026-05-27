@@ -68,6 +68,20 @@ O frontend é responsável pela interação com o usuário e consome os endpoint
 
 O backend concentra as regras da API, valida os dados recebidos e realiza as operações no banco SQLite.
 
+## Instalação e Configuração
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/GabrielXavier0220/Selecao-FESF-SUS.git
+```
+
+Entre no diretório criado pelo clone:
+
+```bash
+cd Selecao-FESF-SUS
+```
+
 ## Como Executar com Docker
 
 Pré-requisitos:

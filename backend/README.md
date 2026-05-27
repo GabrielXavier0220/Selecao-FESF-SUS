@@ -1,6 +1,6 @@
 # Backend
 
-API simples de tarefas usando FastAPI e SQLite.
+API REST de tarefas usando FastAPI e SQLite.
 
 ## Rodar localmente
 

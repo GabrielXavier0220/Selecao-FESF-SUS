@@ -6,7 +6,7 @@ O projeto implementa uma API REST funcional, uma interface web integrada à API 
 
 ## Objetivo
 
-O objetivo da aplicação é permitir o controle simples de tarefas por meio de uma interface web, com operações de criação, listagem, edição, conclusão e exclusão.
+O objetivo da aplicação é permitir o controle de tarefas por meio de uma interface web, com operações de criação, listagem, edição, conclusão e exclusão.
 
 A aplicação foi organizada em dois módulos principais:
 

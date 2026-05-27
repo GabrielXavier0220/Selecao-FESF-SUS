@@ -145,7 +145,7 @@ function App() {
       }
 
       await loadTasks();
-      setMessage("Tarefa excluida.");
+      setMessage("Tarefa excluída.");
     } catch (error) {
       setMessage(error.message);
     }

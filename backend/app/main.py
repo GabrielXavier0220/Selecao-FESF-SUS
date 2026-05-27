@@ -78,6 +78,19 @@ def health_check() -> dict[str, str]:
     return {"status": "ok"}
 
 
+@app.get("/")
+def read_root() -> dict[str, object]:
+    return {
+        "message": "API de Tarefas FESF SUS",
+        "status": "online",
+        "docs": "/docs",
+        "endpoints": {
+            "health": "/health",
+            "tasks": "/tasks",
+        },
+    }
+
+
 @app.get("/tasks", response_model=list[Task])
 def list_tasks() -> list[Task]:
     with get_connection() as connection:

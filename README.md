@@ -1,13 +1,13 @@
 # Controle de Tarefas - FESF SUS
 
-Projeto Full Stack simples para cadastro de tarefas, desenvolvido com FastAPI no backend e React no frontend.
+Projeto Full Stack para cadastro e gerenciamento de tarefas, desenvolvido com FastAPI no backend e React no frontend.
 
 ## Funcionalidades
 
 - Criar tarefa
 - Listar tarefas
 - Editar tarefa
-- Marcar tarefa como concluida
+- Marcar tarefa como concluída
 - Excluir tarefa
 - Persistir dados em SQLite
 
@@ -34,7 +34,7 @@ Depois acesse:
 ```text
 Frontend: http://localhost:3000
 Backend: http://localhost:8000
-Documentacao da API: http://localhost:8000/docs
+Documentação da API: http://localhost:8000/docs
 ```
 
 ## Como executar sem Docker
@@ -65,9 +65,9 @@ http://localhost:5173
 
 ## Rotas principais da API
 
-| Metodo | Rota | Descricao |
+| Método | Rota | Descrição |
 | --- | --- | --- |
-| GET | `/health` | Verifica se a API esta online |
+| GET | `/health` | Verifica se a API está online |
 | GET | `/tasks` | Lista todas as tarefas |
 | POST | `/tasks` | Cria uma nova tarefa |
 | GET | `/tasks/{task_id}` | Busca uma tarefa pelo ID |
@@ -92,12 +92,3 @@ frontend/
 docker-compose.yml
 README.md
 ```
-
-## Observacao
-
-O projeto foi mantido propositalmente simples para facilitar a execucao, a avaliacao e a explicacao tecnica:
-
-- o backend concentra as regras da API;
-- o frontend consome a API com `fetch`;
-- o SQLite salva os dados em arquivo;
-- o Docker Compose sobe backend e frontend juntos.

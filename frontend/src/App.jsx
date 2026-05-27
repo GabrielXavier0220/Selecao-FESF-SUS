@@ -26,7 +26,7 @@ function App() {
       const response = await fetch(`${API_URL}/tasks`);
 
       if (!response.ok) {
-        throw new Error("Nao foi possivel carregar as tarefas.");
+        throw new Error("Não foi possível carregar as tarefas.");
       }
 
       const data = await response.json();
@@ -70,7 +70,7 @@ function App() {
     const trimmedTitle = form.title.trim();
 
     if (trimmedTitle.length < 3) {
-      setMessage("Informe um titulo com pelo menos 3 caracteres.");
+      setMessage("Informe um título com pelo menos 3 caracteres.");
       return;
     }
 
@@ -95,7 +95,7 @@ function App() {
       });
 
       if (!response.ok) {
-        throw new Error("Nao foi possivel salvar a tarefa.");
+        throw new Error("Não foi possível salvar a tarefa.");
       }
 
       clearForm();
@@ -121,7 +121,7 @@ function App() {
       });
 
       if (!response.ok) {
-        throw new Error("Nao foi possivel alterar o status.");
+        throw new Error("Não foi possível alterar o status.");
       }
 
       await loadTasks();
@@ -137,7 +137,7 @@ function App() {
       });
 
       if (!response.ok) {
-        throw new Error("Nao foi possivel excluir a tarefa.");
+        throw new Error("Não foi possível excluir a tarefa.");
       }
 
       if (editingTask?.id === taskId) {
@@ -171,7 +171,7 @@ function App() {
               <strong>{tasks.length}</strong>
             </div>
             <div>
-              <span>Concluidas</span>
+              <span>Concluídas</span>
               <strong>{completedCount}</strong>
             </div>
             <div>
@@ -196,7 +196,7 @@ function App() {
             </div>
 
             <label>
-              Titulo
+              Título
               <input
                 name="title"
                 value={form.title}
@@ -207,7 +207,7 @@ function App() {
             </label>
 
             <label>
-              Descricao
+              Descrição
               <textarea
                 name="description"
                 value={form.description}
@@ -218,7 +218,7 @@ function App() {
             </label>
 
             <button className="primary-button" type="submit">
-              {editingTask ? "Salvar alteracoes" : "Adicionar tarefa"}
+              {editingTask ? "Salvar alterações" : "Adicionar tarefa"}
             </button>
           </form>
 
@@ -245,7 +245,7 @@ function App() {
                       checked={task.completed}
                       onChange={() => toggleTask(task)}
                     />
-                    <span>{task.completed ? "Concluida" : "Pendente"}</span>
+                    <span>{task.completed ? "Concluída" : "Pendente"}</span>
                   </label>
 
                   <div className="task-content">

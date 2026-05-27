@@ -103,7 +103,7 @@ def get_task(task_id: int) -> Task:
         row = connection.execute("SELECT * FROM tasks WHERE id = ?", (task_id,)).fetchone()
 
     if row is None:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Tarefa nao encontrada")
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Tarefa não encontrada")
 
     return row_to_task(row)
 
@@ -114,7 +114,7 @@ def update_task(task_id: int, payload: TaskUpdate) -> Task:
         existing = connection.execute("SELECT * FROM tasks WHERE id = ?", (task_id,)).fetchone()
 
         if existing is None:
-            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Tarefa nao encontrada")
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Tarefa não encontrada")
 
         connection.execute(
             """
@@ -135,4 +135,4 @@ def delete_task(task_id: int) -> None:
         cursor = connection.execute("DELETE FROM tasks WHERE id = ?", (task_id,))
 
     if cursor.rowcount == 0:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Tarefa nao encontrada")
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Tarefa não encontrada")
